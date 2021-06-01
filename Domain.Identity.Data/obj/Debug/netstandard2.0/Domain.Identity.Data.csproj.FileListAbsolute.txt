@@ -1,0 +1,14 @@
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Identity.Data.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Identity.Data.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Identity.Data.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\bin\Debug\netstandard2.0\Domain.Database.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.csproj.CopyComplete
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Data\obj\Debug\netstandard2.0\Domain.Identity.Data.pdb

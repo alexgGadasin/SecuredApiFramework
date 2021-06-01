@@ -1,0 +1,12 @@
+D:\SourceCode\SecuredApiFramework\Domain.Database\bin\Debug\netstandard2.0\Domain.Database.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Database\bin\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Database\bin\Debug\netstandard2.0\Domain.Database.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Database\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Database\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.csproj.CopyComplete
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Database\obj\Debug\netstandard2.0\Domain.Database.pdb

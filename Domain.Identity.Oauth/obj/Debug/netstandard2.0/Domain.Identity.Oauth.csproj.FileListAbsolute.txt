@@ -1,0 +1,14 @@
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Identity.Oauth.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Identity.Oauth.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Identity.Oauth.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\bin\Debug\netstandard2.0\Domain.Database.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.csproj.CopyComplete
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.dll
+D:\SourceCode\SecuredApiFramework\Domain.Identity.Oauth\obj\Debug\netstandard2.0\Domain.Identity.Oauth.pdb

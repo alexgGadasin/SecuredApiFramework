@@ -1,0 +1,121 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/libs/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/libs/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "ServiceName": "IdentityServer",
+      "SwaggerKey": "IdentityServer",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/connect/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/connect/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "ServiceName": "IdentityServer",
+      "SwaggerKey": "IdentityServer",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/identity/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/identity/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "ServiceName": "IdentityServer",
+      "SwaggerKey": "IdentityServer",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/general/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "ServiceName": "GeneralApi",
+      "SwaggerKey": "GeneralApi",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "GeneralApi",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/protected/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "ServiceName": "ProtectedApi",
+      "SwaggerKey": "ProtectedApi",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ProtectedApi",
+        "AllowedScopes": []
+      }
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "IdentityServer",
+      "Config": [
+        {
+          "Name": "IdentityServer",
+          "Version": "v1",
+          "Service": {
+            "Name": "IdentityServer",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "GeneralApi",
+      "Config": [
+        {
+          "Name": "GeneralApi",
+          "Version": "v1",
+          "Service": {
+            "Name": "GeneralApi",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    },
+    {
+      "Key": "ProtectedApi",
+      "Config": [
+        {
+          "Name": "ProtectedApi",
+          "Version": "v1",
+          "Service": {
+            "Name": "ProtectedApi",
+            "Path": "/swagger/v1/swagger.json"
+          }
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44310",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}

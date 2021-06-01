@@ -1,0 +1,16 @@
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Resource.Protected.Business.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Resource.Protected.Business.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Resource.Protected.Business.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Resource.Protected.Data.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Resource.Protected.Data.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\bin\Debug\netstandard2.0\Domain.Database.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.csproj.CopyComplete
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.Protected.Business\obj\Debug\netstandard2.0\Domain.Resource.Protected.Business.pdb

@@ -1,0 +1,75 @@
+|--Resource-------------------------------------------------------------------|
+| IdentityServer - https://localhost:44300 - DB: IdentityServer               |
+| GeneralApi     - https://localhost:44301 - DB: GeneralServer                |
+| ProtectedApi   - https://localhost:44302 - DB: ProtectedServer              |
+|--Gateway--------------------------------------------------------------------|
+| Consul - https://localhost:44310                                            |
+| 	-> IdentityServer : api/connect                                           |
+| 	-> GeneralApi     : api/general                                           |
+| 	-> IdentityServer : api/protected                                         |
+|--Client---------------------------------------------------------------------|
+| WebClient - https://localhost:44320                                         |
+|-----------------------------------------------------------------------------|
+
+|--Database-------------------------------------------------------------------|
+| User               : Users                                                  |
+| UserClaim          : Custom claim for users, will be added on generated JWT |
+| ApiScope           : List of scopes                                         |
+| ApiResource        : List of resources (APIs)                               |
+| ApiResourceScope   : List of scopes registered on resources                 |
+| Client             : List of clients                                        |
+| ClientSecret       : List of client secrets                                 |
+| ClientScope        : List of client scope                                   |
+| AuthorizationCode  : Temporary code for authorization code flow             |
+|-----------------------------------------------------------------------------|
+
+|--Resources------------------------------------------------------------------|
+| IdentityServer                                                              |
+|		- identityserver.read                                                 |
+|		- identityserver.write                                                |
+| GeneralApi                                                                  |
+|		- general.read                                                        |
+|		- general.write                                                       |
+| ProtectedApi                                                                |
+|		- protected.read                                                      |
+|		- protected.write                                                     |
+|-----------------------------------------------------------------------------|
+
+|--Clients--------------------------------------------------------------------|
+| swaggerClient                                                               |
+| Secret : K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols=                       |
+|		- identityserver.read                                                 |
+|		- identityserver.write                                                |
+|		- general.read                                                        |
+|		- general.write                                                       |
+|		- protected.read                                                      |
+|		- protected.write                                                     |
+| sampleClient                                                                |
+| Secret : OaEa/9gu5NfQPH0pkehEm/fU/mBmyKCEaasiasNHDRU=                       |
+|		- protected.read                                                      |
+|		- protected.write                                                     |
+| superClient                                                                 |
+| Secret : OaEa/9gu5NfQPH0pkehEm/fU/mBmyKCEaasiasNHDRU=                       |
+|		- identityserver.read                                                 |
+|		- identityserver.write                                                |
+|		- general.read                                                        |
+|		- general.write                                                       |
+|		- protected.read                                                      |
+|		- protected.write                                                     |
+|-----------------------------------------------------------------------------|
+
+|--Users----------------------------------------------------------------------|
+o reader   :  
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMwMCIsInN1YiI6InJlYWRlci1LSkY2OSIsImFjYyI6IlVzZXIiLCJhdWQiOlsiSWRlbnRpdHlTZXJ2ZXIiLCJHZW5lcmFsQXBpIiwiUHJvdGVjdGVkQXBpIl0sInNjb3BlIjpbImlkZW50aXR5c2VydmVyLnJlYWQiLCJpZGVudGl0eXNlcnZlci53cml0ZSIsImdlbmVyYWwucmVhZCIsImdlbmVyYWwud3JpdGUiLCJwcm90ZWN0ZWQucmVhZCIsInByb3RlY3RlZC53cml0ZSJdLCJ1c2VyLnJvbGUiOiJyZWFkZXIiLCJuYmYiOjE2MjI1NTQ3NDgsImV4cCI6MTY1NDA5MDc0OCwiaWF0IjoxNjIyNTc5OTQ4fQ.CqmPyLsW_eKDkd9Nan-iZoW_FBRMLFCvfwTFAZS_MIc
+
+o writer A : 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMwMCIsInN1YiI6IndyaXRlckEtNEZLUU8iLCJhY2MiOiJVc2VyIiwiYXVkIjpbIklkZW50aXR5U2VydmVyIiwiR2VuZXJhbEFwaSIsIlByb3RlY3RlZEFwaSJdLCJzY29wZSI6WyJpZGVudGl0eXNlcnZlci5yZWFkIiwiaWRlbnRpdHlzZXJ2ZXIud3JpdGUiLCJnZW5lcmFsLnJlYWQiLCJnZW5lcmFsLndyaXRlIiwicHJvdGVjdGVkLnJlYWQiLCJwcm90ZWN0ZWQud3JpdGUiXSwidXNlci5yb2xlIjoid3JpdGVyIiwibmJmIjoxNjIyNTU0ODM0LCJleHAiOjE2NTQwOTA4MzQsImlhdCI6MTYyMjU4MDAzNH0.PiorIA_Lholq4F-gVDWrjGE4Z3S0jZPtwZnPFQWQdwA
+
+o writer B : 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMwMCIsInN1YiI6IndyaXRlckItSkczSzYiLCJhY2MiOiJVc2VyIiwiYXVkIjpbIklkZW50aXR5U2VydmVyIiwiR2VuZXJhbEFwaSIsIlByb3RlY3RlZEFwaSJdLCJzY29wZSI6WyJpZGVudGl0eXNlcnZlci5yZWFkIiwiaWRlbnRpdHlzZXJ2ZXIud3JpdGUiLCJnZW5lcmFsLnJlYWQiLCJnZW5lcmFsLndyaXRlIiwicHJvdGVjdGVkLnJlYWQiLCJwcm90ZWN0ZWQud3JpdGUiXSwidXNlci5yb2xlIjoid3JpdGVyIiwibmJmIjoxNjIyNTU0ODYwLCJleHAiOjE2NTQwOTA4NjAsImlhdCI6MTYyMjU4MDA2MH0.S-MVaRrgITjXAfUql-SSUQc61z5i7qGy-KQ4eT-nIys
+
+o spv      : 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMwMCIsInN1YiI6InNwdi1DSUZWVyIsImFjYyI6IlVzZXIiLCJhdWQiOlsiSWRlbnRpdHlTZXJ2ZXIiLCJHZW5lcmFsQXBpIiwiUHJvdGVjdGVkQXBpIl0sInNjb3BlIjpbImlkZW50aXR5c2VydmVyLnJlYWQiLCJpZGVudGl0eXNlcnZlci53cml0ZSIsImdlbmVyYWwucmVhZCIsImdlbmVyYWwud3JpdGUiLCJwcm90ZWN0ZWQucmVhZCIsInByb3RlY3RlZC53cml0ZSJdLCJ1c2VyLnJvbGUiOiJzdXBlcnZpc29yIiwibmJmIjoxNjIyNTU0ODg2LCJleHAiOjE2NTQwOTA4ODYsImlhdCI6MTYyMjU4MDA4Nn0.yksYsPKffa9BABG8uUwRaTur7AIH-E3vWT5qeftJFOQ
+
+password : password
+|-----------------------------------------------------------------------------|

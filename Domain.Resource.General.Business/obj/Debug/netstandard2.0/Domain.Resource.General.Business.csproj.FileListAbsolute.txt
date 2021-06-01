@@ -1,0 +1,16 @@
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Resource.General.Business.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Resource.General.Business.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Resource.General.Business.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Database.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Resource.General.Data.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Resource.General.Data.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\bin\Debug\netstandard2.0\Domain.Database.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.csproj.CopyComplete
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.dll
+D:\SourceCode\SecuredApiFramework\Domain.Resource.General.Business\obj\Debug\netstandard2.0\Domain.Resource.General.Business.pdb

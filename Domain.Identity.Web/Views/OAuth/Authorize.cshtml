@@ -1,0 +1,112 @@
+﻿@model string
+
+@{ var url = $"/api/connect/authorize{Model}"; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+    <!-- Bootstrap -->
+    <link href="~/libs/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/libs/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/libs/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="~/libs/gentelella/vendors/animate.css/animate.min.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="~/libs/gentelella/build/css/custom.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        .sso-forgot-password {
+            margin: 0px;
+            float: right;
+        }
+
+        .sso-submit {
+            width: 100%
+        }
+    </style>
+
+    <script type="text/javascript">
+        function Authorize() {
+            $.ajax({
+                url: 'theurl',
+                type: 'GET',
+                cache: false,
+                data: {
+                    userid: userid
+                },
+                success: function (data) {
+                    return data;
+                }
+            });
+        }
+    </script>
+</head>
+
+<body class="login">
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form action="@url" method="post">
+                        <h1>Single Sign On</h1>
+                        <div>
+                            <input type="text" name="username" class="form-control" placeholder="Username" required="" />
+                        </div>
+                        <div>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required="" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="#" class="sso-forgot-password">Forgot password?</a>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" value="Submit" class="btn btn-dark sso-submit">Log in</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p style="color: red">@ViewBag.ErrorMessage</p>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <div class="clearfix"></div>
+                            <br />
+
+                            <div>
+                                <h1><i class="fa fa-sign-in"></i> Secured API Framework</h1>
+                                <p>©2021 All Rights Reserved. Privacy and Terms</p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="~/libs/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- NProgress -->
+    <script src="~/libs/gentelella/vendors/nprogress/nprogress.js"></script>
+</body>
+</html>
+@*<form action="@url" method="post">
+        <input type="text" name="username" value="" />
+        <input type="password" name="password" value="" />
+        <input type="submit" value="Submit" />
+
+        <label style="color: red">@ViewBag.ErrorMessage</label>
+    </form>*@

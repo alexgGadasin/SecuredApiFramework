@@ -1,0 +1,9 @@
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\bin\Debug\netstandard2.0\Domain.ServiceDiscovery.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\bin\Debug\netstandard2.0\Domain.ServiceDiscovery.dll
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\bin\Debug\netstandard2.0\Domain.ServiceDiscovery.pdb
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.dll
+D:\SourceCode\SecuredApiFramework\Domain.ServiceDiscovery\obj\Debug\netstandard2.0\Domain.ServiceDiscovery.pdb

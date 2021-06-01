@@ -1,0 +1,12 @@
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\bin\Debug\net5.0\Domain.ApiSecurity.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\bin\Debug\net5.0\Domain.ApiSecurity.dll
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\bin\Debug\net5.0\ref\Domain.ApiSecurity.dll
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\bin\Debug\net5.0\Domain.ApiSecurity.pdb
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.GeneratedMSBuildEditorConfig.editorconfig
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.dll
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\ref\Domain.ApiSecurity.dll
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.pdb
+D:\SourceCode\SecuredApiFramework\Domain.ApiSecurity\obj\Debug\net5.0\Domain.ApiSecurity.csprojAssemblyReference.cache

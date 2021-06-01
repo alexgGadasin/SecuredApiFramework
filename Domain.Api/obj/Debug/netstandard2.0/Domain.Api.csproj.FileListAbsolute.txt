@@ -1,0 +1,9 @@
+D:\SourceCode\SecuredApiFramework\Domain.Api\bin\Debug\netstandard2.0\Domain.Api.deps.json
+D:\SourceCode\SecuredApiFramework\Domain.Api\bin\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Api\bin\Debug\netstandard2.0\Domain.Api.pdb
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.csprojAssemblyReference.cache
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.AssemblyInfoInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.AssemblyInfo.cs
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.csproj.CoreCompileInputs.cache
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.dll
+D:\SourceCode\SecuredApiFramework\Domain.Api\obj\Debug\netstandard2.0\Domain.Api.pdb
