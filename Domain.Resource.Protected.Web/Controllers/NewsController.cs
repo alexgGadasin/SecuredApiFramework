@@ -71,8 +71,11 @@ namespace Domain.Resource.Protected.Web
         {
             var allowedRoles = new List<string>() { "writer", "supervisor" };
             var currentUser = HttpContext.Request.GetClaim("sub");
+            var claims = HttpContext.Request.GetClaims();
 
-            if (!allowedRoles.Contains(HttpContext.Request.GetClaim("user.role")))
+            if (!claims.Any(c => c.Type == "scope" && c.Value == "protected.write"))
+                return Unauthorized();
+            else if (!allowedRoles.Contains(HttpContext.Request.GetClaim("user.role")))
                 return Unauthorized();
             else
             {
