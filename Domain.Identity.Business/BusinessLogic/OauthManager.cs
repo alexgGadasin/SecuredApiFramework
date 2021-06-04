@@ -138,7 +138,7 @@ namespace Domain.Identity.Business
                             throw new OauthException(OauthErrorCode.invalid_scope);
 
                         var access_token = await GetAccessToken(data, currentClient, currentUser);
-                        var refresh_token = GetRefreshToken();
+                        var refresh_token = await GetRefreshToken(currentClient, currentUser);
 
                         var response = new AccessTokenResponse
                         {
@@ -154,11 +154,6 @@ namespace Domain.Identity.Business
                     {
                         _uow.RollbackTransaction();
                         throw;
-                    }
-                    finally
-                    {
-                        clientRepo.Dispose();
-                        authCodeRepo.Dispose();
                     }
                 }
             }
@@ -206,27 +201,69 @@ namespace Domain.Identity.Business
                         _uow.RollbackTransaction();
                         throw;
                     }
-                    finally
-                    {
-                        clientRepo.Dispose();
-                        clientSecretRepo.Dispose();
-                    }
                 }
             }
             else if (data.grant_type == "refresh_token")
             {
-                var access_token = GetAccessToken();
-                var refresh_token = GetRefreshToken();
+                _uow.OpenConnection(ConnectionString.DefaultConnection);
 
-                var response = new AccessTokenResponse
+                using (_uow)
                 {
-                    access_token = access_token,
-                    token_type = "Bearer",
-                    expires_in = _appSettings.AccessTokenExpiration.ToString(),
-                    refresh_token = refresh_token
-                };
+                    RefreshTokenRepository refreshTokenRepository = new RefreshTokenRepository(_uow);
+                    ClientRepository clientRepository = new ClientRepository(_uow);
+                    UserRepository userRepository = new UserRepository(_uow);
 
-                return response;
+                    try
+                    {
+                        var refreshTokens = await refreshTokenRepository.ReadByLambda(rt => rt.Token == data.refresh_token);
+
+                        if(!refreshTokens.Any())
+                            throw new OauthException(OauthErrorCode.invalid_token);
+                        else
+                        {
+                            var currentRefreshToken = refreshTokens.First();
+                            IEnumerable<Client> clients = await clientRepository.ReadByLambda(c => c.ClientId == currentRefreshToken.ClientId);
+                            IEnumerable<User> users = null;
+
+                            if(currentRefreshToken.UserId != null)
+                                users = await userRepository.ReadByLambda(c => c.UserId == currentRefreshToken.UserId);
+
+                            if(clients.Count() == 0)
+                                throw new OauthException(OauthErrorCode.invalid_token);
+                            else if (currentRefreshToken.UserId != null && users.Count() == 0)
+                                throw new OauthException(OauthErrorCode.invalid_token);
+                            else
+                            {
+                                var currentClient = clients.First();
+
+                                string access_token;
+                                
+                                if (currentRefreshToken.UserId == null)
+                                    access_token = await GetAccessToken(data, currentClient);
+                                else
+                                {
+                                    var currentUser = users.First();
+                                    access_token = await GetAccessToken(data, currentClient, currentUser);
+                                }
+
+                                var response = new AccessTokenResponse
+                                {
+                                    access_token = access_token,
+                                    token_type = "Bearer",
+                                    expires_in = _appSettings.AccessTokenExpiration.ToString(),
+                                    refresh_token = data.refresh_token,
+                                };
+
+                                return response;
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        _uow.RollbackTransaction();
+                        throw;
+                    }
+                }
             }
             else
             {
@@ -272,10 +309,6 @@ namespace Domain.Identity.Business
             {
                 throw ex;
             }
-            finally
-            {
-                clientIdentityClaimRepository.Dispose();
-            }
         }
         private async Task<string> GetAccessToken(AccessTokenRequest data, Client client)
         {
@@ -311,27 +344,33 @@ namespace Domain.Identity.Business
             {
                 throw ex;
             }
-            finally
-            {
-                clientIdentityClaimRepository.Dispose();
-            }
         }
-        private string GetAccessToken()
+        private async Task<string> GetRefreshToken(Client client, User user)
         {
-            // Register claims
-            var claims = new List<Claim>
+            RefreshTokenRepository refreshTokenRepository = new RefreshTokenRepository(_uow);
+
+            try
             {
-                new Claim(JwtRegisteredClaimNames.Iss, _appSettings.AppUrl),
-                new Claim(JwtRegisteredClaimNames.Sub, "refresh"),
-            };
+                var refreshToken = new RefreshToken()
+                {
+                    Token = GetRefreshToken(),
+                    ClientId = client.ClientId,
+                    IssueDate = DateTime.Now,
+                    ExpiryDate = DateTime.Now.AddMinutes(_appSettings.RefreshTokenExpiration),
+                    Revoked = false
+                };
 
-            // Key credentials
-            var issuer = _appSettings.AppUrl;
-            var audience = _appSettings.AppUrl;
-            var secret = _appSettings.SaltFixed;
-            var expire_interval = _appSettings.AccessTokenExpiration;
+                if (user != null)
+                    refreshToken.UserId = user.UserId;
 
-            return OauthTokenManager.GenerateAccessToken(issuer, audience, secret, claims, expire_interval);
+                await refreshTokenRepository.Insert(refreshToken);
+
+                return refreshToken.Token;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         private string GetRefreshToken()
         {

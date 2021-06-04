@@ -7,9 +7,9 @@ namespace Domain.Identity.Oauth
     {
         [Primary]
         public long Id { get; set; }
-        public string  Subject { get; set; }
-        public char Type { get; set; }
-        public string Value { get; set; }
+        public string Token { get; set; }
+        public long ClientId { get; set; }
+        public string UserId { get; set; }
         public DateTime IssueDate { get; set; }
         public DateTime ExpiryDate { get; set; }
         public bool Revoked { get; set; }

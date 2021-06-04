@@ -50,8 +50,7 @@ namespace Domain.Identity.Oauth
                 audience,
                 claims,
                 notBefore: issued_at,
-                //expires: issued_at.AddSeconds(expire_interval),
-                expires: issued_at.AddYears(1),
+                expires: issued_at.AddMinutes(expire_interval),
                 signingCredentials: signingCredentials);
 
             token.Payload[JwtRegisteredClaimNames.Iat] = (int)issued_at.Subtract(utc0).TotalSeconds;            

@@ -68,11 +68,11 @@ namespace Domain.Database
         {
             if (stat)
             {
-                if (this._uow != null)
-                {
-                    this._uow.Dispose();
-                    this._uow = null;
-                }
+                //if (this._uow != null)
+                //{
+                //    this._uow.Dispose();
+                //    this._uow = null;
+                //}
             }
         }
     }

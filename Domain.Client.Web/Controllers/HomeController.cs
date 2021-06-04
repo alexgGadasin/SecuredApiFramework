@@ -92,12 +92,11 @@ namespace Domain.Client.Web.Controllers
                 Content = new FormUrlEncodedContent(requestData)
             };
 
-            var basicCredentials = "username:password";
-            var encodedCredentials = Encoding.UTF8.GetBytes(basicCredentials);
-            var base64Credentials = Convert.ToBase64String(encodedCredentials);
+            //var basicCredentials = "username:password";
+            //var encodedCredentials = Encoding.UTF8.GetBytes(basicCredentials);
+            //var base64Credentials = Convert.ToBase64String(encodedCredentials);
 
-
-            request.Headers.Add("Authorization", $"Basic {base64Credentials}");
+            //request.Headers.Add("Authorization", $"Basic {base64Credentials}");
 
             var response = await refreshTokenClient.SendAsync(request);
 
@@ -108,7 +107,6 @@ namespace Domain.Client.Web.Controllers
             var newRefreshToken = responseData.GetValueOrDefault("refresh_token");
 
             var authInfo = await HttpContext.AuthenticateAsync("ClientCookie");
-
             authInfo.Properties.UpdateTokenValue("access_token", newAccessToken);
             authInfo.Properties.UpdateTokenValue("refresh_token", newRefreshToken);
 

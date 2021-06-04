@@ -145,7 +145,8 @@ namespace Domain.Identity.Web
                 {
                     var requestData = new AccessTokenRequest()
                     {
-                        grant_type = grant_type
+                        grant_type = grant_type,
+                        refresh_token = refresh_token
                     };
 
                     var data = await _oauthCodeManager.Token(requestData);
